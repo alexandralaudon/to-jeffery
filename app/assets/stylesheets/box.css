@@ -17,12 +17,11 @@ body {
 	background-color: #ecf0f1;
 	font-family: Arial, Tahoma;
 	font-size: 15px;
-	color: white;
 	text-align: center;
 }
 
 .col_fifth {
-  width: 18.4%;
+  width: 17.5%;
 	position: relative;
 	display:inline;
 	display: inline-block;
@@ -33,8 +32,9 @@ body {
 
 /* Boxes Styling*/
 .box1{
-  background: url('https://students-gschool-production.s3.amazonaws.com/uploads/user/avatar/269/card_alexandra_laudon.jpg');
   background-size: cover;
+  background-position: 0px;
+  color: white;
 	width: 150px;
 	height: 150px;
 	border-radius: 10px;
@@ -44,6 +44,7 @@ body {
 
 .box2 {
 	background-color: #14bcc8;
+  color: white;
 	width: 150px;
 	margin: 0 auto;
 	padding: 20px;

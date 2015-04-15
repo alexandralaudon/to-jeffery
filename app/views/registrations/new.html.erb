@@ -1,0 +1,20 @@
+<%= form_for @user, url: sign_up_path do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <br>
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+
+  <br>
+
+  <%= f.label :message %>
+  <%= f.text_area :message %>
+
+  <br>
+
+  <%= f.submit 'Create Message for Jeffery' %>
+
+<% end %>
