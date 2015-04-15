@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150415225623) do
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
   end
 
 end
