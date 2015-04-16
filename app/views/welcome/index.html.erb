@@ -1,13 +1,15 @@
 <h1>JEFFERY</h1>
 <h5> May illness leave your company instantly and good health be at your side forever. Waiting eagerly for your fast recovery.</h5>
 
+<br>
+
 <% @users.each do |user| %>
 
   <div class="wrapper">
     <div class="col_fifth">
       <div class="hover panel">
         <div class="front box1">
-          <%= image_tag user.avatar.url(:thumb) %>
+          <%= image_tag user.avatar.url(:medium) %>
         </div>
         <div class="back box2">
           <%= user.message %>
