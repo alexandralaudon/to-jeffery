@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  get 'add-message', to: 'messages#new'
+  get 'add_message', to: 'messages#new'
+  post 'add_message', to: 'messages#create'
 
 end
