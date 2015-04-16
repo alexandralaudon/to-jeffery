@@ -40,12 +40,13 @@ Rails.application.configure do
   config.serve_static_files = true
   # PaperClip/Figaro/AWS/S3/Fog Gems added info here
   config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV['S3_BUCKET_NAME'],
+    :storage => :fog,
+    :fog_credentials => {
+      :provider => "AWS",
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
+    :fog_directory => ENV['S3_BUCKET_NAME']
   }
 
   config.action_mailer.smtp_settings = {
