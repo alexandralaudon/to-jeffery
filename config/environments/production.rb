@@ -22,7 +22,6 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -37,8 +36,9 @@ Rails.application.configure do
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
+  # The configuration option `config.serve_static_assets` has been renamed to `config.serve_static_files` to clarify its role
+  config.serve_static_files = true
   # PaperClip/Figaro/AWS/S3/Fog Gems added info here
-  config.serve_static_assets = true
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
@@ -47,6 +47,15 @@ Rails.application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["EMAIL_LOGIN"],
+    password: ENV["EMAIL_PASSWORD"]
+}
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
