@@ -37,6 +37,8 @@ Rails.application.configure do
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
+  # PaperClip/Figaro/AWS/S3/Fog Gems added info here
+  config.serve_static_assets = true
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
