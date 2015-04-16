@@ -35,8 +35,6 @@ body {
   background-size: cover;
   background-position: 0px;
   color: white;
-	width: 150px;
-	height: 150px;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -45,7 +43,7 @@ body {
 .box2 {
 	background-color: #14bcc8;
   color: white;
-	width: 150px;
+	width: 200px;
 	margin: 0 auto;
 	padding: 20px;
 	border-radius: 10px;
